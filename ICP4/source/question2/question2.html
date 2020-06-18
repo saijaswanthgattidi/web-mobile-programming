@@ -1,0 +1,63 @@
+<html>
+<!--head section-->
+<head>
+    <style>
+        body {
+            background-image: url('https://tse2.mm.bing.net/th?id=OIP.KHsx_H-_PDkSPfv4qoAMVQHaEo&pid=Api&P=0&w=241&h=152');
+        }
+    </style>
+    <!--title of page-->
+    <title>Github User Finder</title>
+    <!--Referring to cascading style sheet(css)file-->
+    <link href="style.css" rel="stylesheet">
+    <!--Referring to Jquery file-->
+    <script src="jquery.js" type="text/javascript"></script>
+    <!--Referring to Javascript(js)file-->
+    <script src="script.js" type="text/javascript"></script>
+</head>
+<!--body section-->
+<body>
+<!--Header-->
+<header>
+    <h1>Find who am I !!!</h1>
+</header>
+<div id="container">
+    <div class="search">
+        <input id="username" placeholder="enter a username..." type="text"></input>
+    </div>
+    <div id="profile">
+        <h2></h2>
+        <div class="avatar">
+            <img id="imgavg">
+        </div>
+        <div class="information">
+            <!--table creation-->
+            <table>
+                <!--table row-->
+                <tr>
+                    <td>Name</td> <td><span id="txtname"></span></td>
+                </tr>
+                <!--table row-->
+                <tr>
+                <td>ID</td> <td><span id="txtid"></span></td>
+               </tr>
+                <!--table row-->
+                <tr>
+                <td>GitHub URL</td> <td><a id="txturl"></a></td>
+                </tr>
+                <!--table row-->
+                <tr>
+                <td>Public Repositories</td> <td><span id="txtrepository"></span></td>
+                </tr>
+                <!--table row-->
+                <tr>
+                    <td>followers</td> <td><span id="followers"></span></td>
+                </tr>
+                <!--table row-->
+                <tr>
+                    <td>following</td> <td><span id="following"></span></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
