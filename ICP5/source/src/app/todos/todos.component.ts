@@ -12,6 +12,8 @@ export class TodosComponent implements OnInit {
   public hours: any;
   public minutes: any;
   public seconds: any;
+  public eventname: string;
+  public eventDate: any;
   public timerMessage: any;
   public showTimerCount =false;
   constructor() { }
@@ -48,7 +50,7 @@ export class TodosComponent implements OnInit {
 
   showTimer() {
     this.showTimerCount = !this.showTimerCount;
-    const countDownDate = new Date("July 15, 2020 15:37:25").getTime();
+    const countDownDate = new Date(this.eventDate).getTime();
     // Update the count down every 1 second
     setInterval(( )=> {
 

@@ -20,7 +20,7 @@ label{
 /* You can add global styles to this file, and also import other style files // You can add global styles to this file, and also import other style files */
 
 p.timer {
-  width:35%;
+  /*width:35%;*/
   margin:0 auto;
   border: 1px solid #602509;
   border-radius: 10px;
@@ -33,4 +33,14 @@ p.timer {
 
 .timer .text {
   font-size: 10px;
+}
+
+.event {
+  border:1px solid black;
+  margin-right:10px;
+}
+
+.task {
+  border:1px solid black;
+  margin-left:10px;
 }
