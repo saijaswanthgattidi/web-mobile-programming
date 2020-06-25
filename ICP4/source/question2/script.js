@@ -1,4 +1,4 @@
-function getGithubInfo(user) {
+function getGithubInformation(user) {
     //Create an instance of XMLHttpRequest class and send a GET request using it.
     var username='https://api.github.com/users/'+user;
     console.log(username);
@@ -8,15 +8,12 @@ function getGithubInfo(user) {
         dataType: 'json',
 
     }).done(function(data){
-        showUser(data);
-
-    }).fail(function(){
-        console.log("Some error Happened");
-        noSuchUser(user);
+        showUserData(data);
+        
     });
 
 }
-function showUser(user) {
+function showUserData(user) {
     //set the contents of the h2 and the two div elements in the div '#profile' with the user content
     document.getElementById('imgavg').src=user.avatar_url;
     document.getElementById('txtname').innerText=user.name;
@@ -26,23 +23,16 @@ function showUser(user) {
     document.getElementById('txtrepository').innerText=user.public_repos;
     document.getElementById('followers').innerText=user.followers;
     document.getElementById('following').innerText=user.following;
-}
-function noSuchUser(username) {
-    //set the elements such that a suitable message is displayed
-    if(data.message == "Not Found" || username == '') {
-        alert("User not found");
-    }
+    document.getElementById('company').innerText=user.company;
+    document.getElementById('location').innerText=user.location;
+
 }
 $(document).ready(function () {
     $(document).on('keypress', '#username', function (e) {
         if (e.which == 13) {
             username = $(this).val();
-            //change the text typed
             $(this).val("");
-            //get the user's information and store the respsonse
-            getGithubInfo(username);
-            //if the response is successful show the user's details
-
+            getGithubInformation(username);
         }
     })
 });
