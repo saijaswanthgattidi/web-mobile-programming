@@ -1,0 +1,16 @@
+<resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
+    <string name="app_name">Pizza App</string>
+    <!-- For Pizza Order Summary -->
+    <string name="order_summary_name">Name:<xliff:g id="name" example="sai">%s</xliff:g></string>
+    <string name="order_summary_mushroom"><b>Want to Add mushroom Topping? </b><xliff:g id="addmushroom" example="yes">%s</xliff:g></string>
+    <string name="order_summary_spinach"><b>Want to Add spinach Topping? </b><xliff:g id="addspinach" example="yes">%s</xliff:g></string>
+    <string name="order_summary_chicken"><b>Want to Add chicken Topping? </b><xliff:g id="addchicken" example="yes">%s</xliff:g></string>
+    <string name="order_summary_bacon"><b>Want to Add bacon Topping? </b><xliff:g id="addbacon" example="yes">%s</xliff:g></string>
+    <string name="order_summary_coke"><b>Want a coke drink? </b><xliff:g id="addcoke" example="yes">%s</xliff:g></string>
+    <string name="order_summary_pepsi"><b>Want a pepsi drink? </b><xliff:g id="addpepsi" example="yes">%s</xliff:g></string>
+    <string name="order_summary_quantity"><b>Quantity: </b><xliff:g id="quantity" example="1">%d</xliff:g></string>
+    <string name="order_summary_total_price"><b>Total: </b>$ <xliff:g id="price" example="10">%.2f</xliff:g></string>
+    <string name="thank_you"><b>Thank you!</b></string>
+
+    <string name="summaryMessage"><u>Your Order Summary</u></string>
+</resources>
