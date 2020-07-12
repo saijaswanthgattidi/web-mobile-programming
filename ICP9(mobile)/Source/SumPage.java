@@ -22,11 +22,11 @@ public class SumPage extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_sum_page);
         summaryText = findViewById(R.id.summaryText);
-        summaryText.setText(Html.fromHtml("<u>Your Order Summary</u><br/><br/>"));
+        summaryText.setText(Html.fromHtml("<u>Order Summary</u><br/><br/>"));
         if (getIntent() != null) {
             summaryText.append(getIntent().getStringExtra("orderSummary"));
         } else {
-            summaryText.setText("You have no orders !!");
+            summaryText.setText("No recent orders !!");
         }
         summaryText.append(Html.fromHtml("<br/>"));
         summaryText.setVisibility(View.VISIBLE);
