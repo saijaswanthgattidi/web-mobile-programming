@@ -1,5 +1,5 @@
 <resources xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2">
-    <string name="app_name">Pizza App</string>
+    <string name="app_name">Dominos</string>
     <!-- For Pizza Order Summary -->
     <string name="order_summary_name">Name:<xliff:g id="name" example="sai">%s</xliff:g></string>
     <string name="order_summary_mushroom"><b>Want to Add mushroom Topping? </b><xliff:g id="addmushroom" example="yes">%s</xliff:g></string>
