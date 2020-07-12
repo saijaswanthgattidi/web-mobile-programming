@@ -30,7 +30,7 @@ public class SumPage extends AppCompatActivity {
         }
         summaryText.append(Html.fromHtml("<br/>"));
         summaryText.setVisibility(View.VISIBLE);
-        OrderButton = findViewById(R.id.orderinsummaryXML);
+        OrderButton = findViewById(R.id.orderinsummary);
 
         OrderButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -39,7 +39,7 @@ public class SumPage extends AppCompatActivity {
             }
         });
     }
-    public void reDirectToOrderingPage() {
+    public void reDirectToOrderPage() {
         Intent intent = new Intent(SumPage.this, MenuPage.class);
         startActivity(intent);
     }
