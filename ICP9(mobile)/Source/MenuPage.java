@@ -49,7 +49,7 @@ public class MenuPage extends AppCompatActivity {
         String userName = customer_name.getText().toString();
         if (userName == null || userName.isEmpty()) {
             Context context = getApplicationContext();
-            String upperLimitToast = "Customer Name is Required";
+            String upperLimitToast = "Name of the customer is Required";
             int duration = Toast.LENGTH_SHORT;
             Toast toast = Toast.makeText(context, upperLimitToast, duration);
             toast.show();
@@ -80,7 +80,7 @@ public class MenuPage extends AppCompatActivity {
         }
     }
 
-    public void orderPizzaMain(View view) {
+    public void orderMenu(View view) {
         if (!isUserEmpty()) {
             orderSummary = fetchDetails();
             Intent emailIntent = new Intent(Intent.ACTION_SEND);
@@ -91,7 +91,7 @@ public class MenuPage extends AppCompatActivity {
             startActivity(Intent.createChooser(emailIntent, ""));
         }
     }
-    private String fetchOrderSummary(String userName, boolean mushroom_flag, boolean spinach_flag,
+    private String fetchSummary(String userName, boolean mushroom_flag, boolean spinach_flag,
                                      boolean chicken_flag, boolean bacon_flag,boolean coke_flag,boolean pepsi_flag, float total_price) {
         return getString(R.string.order_summary_name,userName) +"\n"+
                 getString(R.string.order_summary_coke,BooleanUtils.toStringYesNo(coke_flag)) +"\n"+
@@ -105,7 +105,7 @@ public class MenuPage extends AppCompatActivity {
                 getString(R.string.thank_you);
     }
 
-    private float calculate_price(boolean mushroom, boolean spinach, boolean chicken, boolean bacon, Integer quantity) {
+    private float cal_price(boolean mushroom, boolean spinach, boolean chicken, boolean bacon, Integer quantity) {
         int basePrice = base_rate;
         if (mushroom) {
             basePrice += mushroom_price;
@@ -122,7 +122,7 @@ public class MenuPage extends AppCompatActivity {
         return quantity * basePrice;
     }
 
-    public void more(View view) {
+    public void morequan(View view) {
         if (quantity < 10) {
             quantity = quantity + 1;
             display(quantity);
@@ -138,12 +138,12 @@ public class MenuPage extends AppCompatActivity {
     }
 
 
-    public void less(View view) {
+    public void lessquan(View view) {
         if (quantity > 1) {
             quantity = quantity - 1;
             display(quantity);
         } else {
-            Log.i("CoffeOrder", "Please select atleast one Pizza");
+            Log.i("pizzaOrder", "Please select atleast one Pizza");
             Context context = getApplicationContext();
             String upperLimitToast = "Please select atleast one Pizza";
             int duration = Toast.LENGTH_SHORT;
