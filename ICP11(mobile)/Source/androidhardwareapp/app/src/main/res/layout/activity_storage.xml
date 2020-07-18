@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/note"
+    tools:context=".StorageActivity">
+
+    <EditText
+        android:id="@+id/txtData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginRight="30dp"
+        android:hint="Please enter the text" />
+
+    <Button
+        android:id="@+id/SaveData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/txtData"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="72dp"
+        android:layout_marginRight="30dp"
+        android:background="#FFEB3B"
+        android:onClick="save"
+        android:text="Save"
+        android:textSize="18sp" />
+
+    <Button
+        android:id="@+id/LoadData"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/SaveData"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="29dp"
+        android:layout_marginRight="30dp"
+        android:background="#FFEB3B"
+        android:onClick="load"
+        android:text="Load"
+        android:textSize="18sp" />
+
+    <TextView
+        android:id="@+id/Data"
+        android:layout_width="232dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/LoadData"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="19dp"
+        android:layout_marginRight="19dp"
+        android:layout_marginBottom="348dp"
+        android:textColor="#D83838"
+        android:textSize="24sp" />
+</RelativeLayout>
