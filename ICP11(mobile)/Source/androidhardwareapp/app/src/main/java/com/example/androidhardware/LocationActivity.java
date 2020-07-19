@@ -62,7 +62,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
      * Once the permission is allow then we are initializing the map.
      */
     @Override
-    public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
+    public void onRequestPermissionResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         mLocationPermission = false;
         switch (requestCode) {
             case 2345:
@@ -105,7 +105,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     /*
      * In this method we will get the current location details.
      */
-    private void getCurrentLocation() {
+    private void getCurrentLoc() {
         mFusedLocationProviderClient = LocationServices.getFusedLocationProviderClient(this);
         try{
             if(mLocationPermission){
@@ -133,7 +133,7 @@ public class LocationActivity extends AppCompatActivity implements OnMapReadyCal
     /*
      * In this method we will update the marker and latitude and longitude details.
      */
-    private void updateLocation(LatLng latlng, float zoom){
+    private void updateLoc(LatLng latlng, float zoom){
         mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(latlng,zoom));
         // Add a marker in Sydney and move the camera
         mMap.addMarker(new MarkerOptions().position(latlng).title("Latitude : "+latlng.latitude+" "+"Longitude : "+latlng.longitude));
