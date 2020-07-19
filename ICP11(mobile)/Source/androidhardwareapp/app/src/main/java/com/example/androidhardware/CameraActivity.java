@@ -19,13 +19,13 @@ public class CameraActivity extends AppCompatActivity {
         setContentView(R.layout.activity_camera);
     }
 
-    public void openCamera(View view) {
+    public void openCam(View view) {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         startActivityForResult(intent, CAMERA_REQ);
     }
 
     @Override
-    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+    protected void onActivityRes(int requestCode, int resultCode, @Nullable Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
         if (requestCode == CAMERA_REQ) {
             Bitmap bitmap = (Bitmap) data.getExtras().get("data");
