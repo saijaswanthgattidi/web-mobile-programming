@@ -16,7 +16,7 @@
         android:hint="Please enter the text" />
 
     <Button
-        android:id="@+id/SaveData"
+        android:id="@+id/Save"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/txtData"
@@ -29,7 +29,7 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/LoadData"
+        android:id="@+id/Load"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_below="@+id/SaveData"

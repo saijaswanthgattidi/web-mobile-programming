@@ -7,7 +7,7 @@
     tools:context=".RecordingActivity">
 
     <Button
-        android:id="@+id/StartRecord"
+        android:id="@+id/Start"
         android:layout_width="328dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"
@@ -22,10 +22,10 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/StopRecord"
-        android:layout_width="329dp"
+        android:id="@+id/Stop"
+        android:layout_width="328dp"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/StartRecord"
+        android:layout_below="@+id/Start"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
         android:layout_marginLeft="30dp"
@@ -38,7 +38,7 @@
         android:textSize="18sp" />
 
     <Button
-        android:id="@+id/StartPlay"
+        android:id="@+id/Play"
         android:layout_width="322dp"
         android:layout_height="wrap_content"
         android:layout_below="@+id/StopRecord"
@@ -53,20 +53,8 @@
         android:text="Play"
         android:textSize="18sp" />
 
-    <Button
-        android:id="@+id/btnStopPlay"
-        android:layout_width="11dp"
-        android:layout_height="0dp"
-        android:layout_below="@+id/StartPlay"
-        android:layout_marginLeft="30dp"
-        android:layout_marginTop="5dp"
-        android:layout_marginRight="180dp"
-        android:background="#FF4081"
-        android:onClick="stopPlay"
-        android:text="Stop Recording" />
-
     <TextView
-        android:id="@+id/textView2"
+        android:id="@+id/textView4"
         android:layout_width="199dp"
         android:layout_height="wrap_content"
         android:layout_alignParentEnd="true"

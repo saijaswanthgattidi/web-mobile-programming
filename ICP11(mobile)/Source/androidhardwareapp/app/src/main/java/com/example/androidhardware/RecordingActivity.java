@@ -19,7 +19,7 @@ import java.text.SimpleDateFormat;
 import java.util.Date;
 
 public class RecordingActivity extends AppCompatActivity {
-    Button btnStartRecord, btnStopRecord, btnStartPlay, btnStopPlay;
+    Button Start, Stop, Start;
     MediaRecorder mediaRecorder;
     MediaPlayer mediaPlayer;
     String pathSave = "";
@@ -28,16 +28,15 @@ public class RecordingActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_recording);
-        btnStartRecord = findViewById(R.id.StartRecord);
-        btnStopRecord = findViewById(R.id.StopRecord);
-        btnStartPlay = findViewById(R.id.StartPlay);
-        btnStopPlay = findViewById(R.id.btnStopPlay);
+        Start = findViewById(R.id.StartRecord);
+        Stop = findViewById(R.id.StopRecord);
+        Start = findViewById(R.id.StartPlay);
         if (!checkPermission()) {
             requestPermission();
         }
     }
 
-    public void startrecord(View view) {
+    public void start(View view) {
         String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(new Date());
         String filename;
         filename = "Recording" + timeStamp + ".3gp";
@@ -81,7 +80,7 @@ public class RecordingActivity extends AppCompatActivity {
         mediaRecorder.setOutputFile(pathSave);
     }
 
-    public void stopRecord(View view) {
+    public void stop(View view) {
         Toast.makeText(getApplicationContext(), "Stop Recording...!!", Toast.LENGTH_SHORT).show();
         mediaRecorder.stop();
         mediaRecorder.reset();
@@ -89,7 +88,7 @@ public class RecordingActivity extends AppCompatActivity {
         mediaRecorder = null;
     }
 
-    public void playRecord(View view) {
+    public void play(View view) {
         mediaPlayer = new MediaPlayer();
         try {
             Toast.makeText(getApplicationContext(), "Play Recording..!!", Toast.LENGTH_SHORT).show();

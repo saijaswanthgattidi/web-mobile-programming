@@ -15,22 +15,22 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
     }
 
-    public void LocationDetails(View view) {
+    public void LocationDetail(View view) {
         redirect = new Intent(MainActivity.this,LocationActivity.class);
         startActivity(redirect);
     }
 
-    public void takePhoto(View view) {
+    public void takePic(View view) {
         redirect = new Intent(MainActivity.this,CameraActivity.class);
         startActivity(redirect);
     }
 
-    public void recordVoice(View view) {
+    public void record(View view) {
         redirect = new Intent(MainActivity.this,RecordingActivity.class);
         startActivity(redirect);
     }
 
-    public void saveData(View view) {
+    public void save(View view) {
         redirect = new Intent(MainActivity.this,StorageActivity.class);
         startActivity(redirect);
     }
