@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "988600699588",
+    "firebase_url": "https://fir-dbe81.firebaseio.com",
+    "project_id": "fir-dbe81",
+    "storage_bucket": "fir-dbe81.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:988600699588:android:81090869be3195dad2d791",
+        "android_client_info": {
+          "package_name": "com.vijaya.firebase"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "988600699588-01n9q58odssr1mddi1bii01dom8cft6s.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.vijaya.firebase",
+            "certificate_hash": "00c75d91cdd25b8517b7ef7da07b4db4238b5af6"
+          }
+        },
+        {
+          "client_id": "988600699588-pkh88mpqvikf9pv0n6os3mk6i1ncbb6g.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB9Hy5w3ebSZaQHJR3gRw5yyDdXZN_Z0U4"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "988600699588-pkh88mpqvikf9pv0n6os3mk6i1ncbb6g.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
