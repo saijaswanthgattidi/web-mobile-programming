@@ -13,7 +13,6 @@ public class WelcomeActivity extends AppCompatActivity {
         Intent redirect = new Intent(WelcomeActivity.this, SignUpActivity.class);
         startActivity(redirect);
     }
-
     public void redirectToSignInPage(View v) {
         Intent redirect = new Intent(WelcomeActivity.this, LoginActivity.class);
         startActivity(redirect);
