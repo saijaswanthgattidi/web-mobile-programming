@@ -51,21 +51,21 @@ public class EmployeeActivity extends AppCompatActivity {
         cursorAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         binding.employerSpinner.setAdapter(cursorAdapter);
 
-        binding.saveButton.setOnClickListener(new View.OnClickListener() {
+        binding.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 saveToDB();
             }
         });
 
-        binding.updateButton.setOnClickListener(new View.OnClickListener() {
+        binding.update.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 updateDB();
             }
         });
-        binding.deleteButton.setOnClickListener(new View.OnClickListener() {
+        binding.delete.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
@@ -73,7 +73,7 @@ public class EmployeeActivity extends AppCompatActivity {
             }
         });
 
-        binding.searchButton.setOnClickListener(new View.OnClickListener() {
+        binding.search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 readFromDB();
