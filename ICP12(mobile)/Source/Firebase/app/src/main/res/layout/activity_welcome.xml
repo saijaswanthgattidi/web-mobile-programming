@@ -20,7 +20,7 @@
         android:padding="10dp">
 
         <Button
-            android:id="@+id/btnSignUp"
+            android:id="@+id/SignUp"
             style="@style/DefaultButtonText"
             android:layout_width="356dp"
             android:layout_height="64dp"
@@ -33,7 +33,7 @@
             android:textSize="24sp" />
 
         <Button
-            android:id="@+id/btnSingIn"
+            android:id="@+id/SingIn"
             style="@style/DefaultButtonText"
             android:layout_width="match_parent"
             android:layout_height="58dp"
