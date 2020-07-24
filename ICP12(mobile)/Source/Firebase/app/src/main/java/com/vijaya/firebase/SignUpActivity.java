@@ -1,5 +1,4 @@
 package com.vijaya.firebase;
-
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
@@ -8,21 +7,17 @@ import android.graphics.Bitmap;
 import android.os.Bundle;
 import android.os.Environment;
 import android.provider.MediaStore;
-
 import android.text.TextUtils;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.Toast;
-
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-
 import java.io.ByteArrayOutputStream;
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -36,30 +31,24 @@ public class SignUpActivity extends AppCompatActivity {
     EditText txtAddress;
     String userChoosenTask;
     Bitmap userPhoto=null;
-
     private FirebaseAuth auth;
-
     private EditText inputEmail, inputPassword;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_signup);
         //getActionBar().setTitle("Sign Up");
         userImage = (ImageView) findViewById(R.id.ivUserImage);
-        inputEmail = (EditText) findViewById(R.id.etEmail);
-        inputPassword = (EditText) findViewById(R.id.etPass);
-
+        inputEmail = (EditText) findViewById(R.id.Email);
+        inputPassword = (EditText) findViewById(R.id.Pass);
         //Get Firebase auth instance
         auth = FirebaseAuth.getInstance();
-
     }
 
     public void onClickOfPhotoButton(View v) {
         //This code redirects to the photo activity.
         selectImage();
     }
-
     private void selectImage() {
         final CharSequence[] items = { "Take Photo", "Choose from Library", "Cancel" };
         AlertDialog.Builder builder = new AlertDialog.Builder(SignUpActivity.this);
@@ -84,7 +73,6 @@ public class SignUpActivity extends AppCompatActivity {
         });
         builder.show();
     }
-
     private void cameraIntent()
     {
         Intent intent = new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
@@ -111,7 +99,7 @@ public class SignUpActivity extends AppCompatActivity {
         }
     }
 
-    private void onSelectFromGalleryResult(Intent data) {
+    private void onSelectGalleryResult(Intent data) {
 
         Bitmap bm=null;
         if (data != null) {
@@ -158,17 +146,14 @@ public class SignUpActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(), "Enter email address!", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (TextUtils.isEmpty(password)) {
             Toast.makeText(getApplicationContext(), "Enter password!", Toast.LENGTH_SHORT).show();
             return;
         }
-
-        if (password.length() < 6) {
-            Toast.makeText(getApplicationContext(), "Password too short, enter minimum 6 characters!", Toast.LENGTH_SHORT).show();
+        if (password.length() < 7) {
+            Toast.makeText(getApplicationContext(), "Password too short, enter minimum 7 characters!", Toast.LENGTH_SHORT).show();
             return;
         }
-
         if (true) {
             Toast.makeText(getApplicationContext(), "inside firebase sign up ", Toast.LENGTH_SHORT).show();
         }
@@ -190,9 +175,5 @@ public class SignUpActivity extends AppCompatActivity {
                         }
                     }
                 });
-
-
     }
-
-
 }

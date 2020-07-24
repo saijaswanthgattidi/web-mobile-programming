@@ -41,8 +41,8 @@ public class HomeActivity extends AppCompatActivity {
         txtDetails = (TextView) findViewById(R.id.txt_user);
         inputName = (EditText) findViewById(R.id.name);
         inputPhone = (EditText) findViewById(R.id.phone);
-        btnSave = (Button) findViewById(R.id.btn_save);
-        btnLogout = (Button) findViewById(R.id.btn_Logout);
+        Save = (Button) findViewById(R.id.save);
+        Logout = (Button) findViewById(R.id.Logout);
 
         mFirebaseInstance = FirebaseDatabase.getInstance();
 
@@ -103,9 +103,9 @@ public class HomeActivity extends AppCompatActivity {
     // Changing button text
     private void toggleButton() {
         if (TextUtils.isEmpty(userId)) {
-            btnSave.setText("Save");
+            Save.setText("Save");
         } else {
-            btnSave.setText("Update");
+            Save.setText("Update");
         }
     }
 

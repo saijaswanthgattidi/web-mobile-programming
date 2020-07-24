@@ -1,5 +1,4 @@
 package com.vijaya.firebase;
-
 import android.content.Intent;
 import android.os.Bundle;
 
@@ -55,12 +54,6 @@ public class LoginActivity extends AppCompatActivity {
         mPasswordView = (EditText) findViewById(R.id.password);
 
     }
-
-    /**
-     * Attempts to sign in or register the account specified by the login form.
-     * If there are form errors (invalid email, missing fields, etc.), the
-     * errors are presented and no actual login attempt is made.
-     */
     public void attemptLogin(View v) {
 
         // Reset errors.
@@ -87,11 +80,7 @@ public class LoginActivity extends AppCompatActivity {
         auth.signInWithEmailAndPassword(email, password)
                 .addOnCompleteListener(LoginActivity.this, new OnCompleteListener<AuthResult>() {
                     @Override
-                    public void onComplete(@NonNull Task<AuthResult> task) {
-                        // If sign in fails, display a message to the user. If sign in succeeds
-                        // the auth state listener will be notified and logic to handle the
-                        // signed in user can be handled in the listener.
-
+                    public void onComplete(@NonNull Task<AuthResult> task) 
                         if (!task.isSuccessful()) {
                             // there was an error
                             Toast.makeText(LoginActivity.this, getString(R.string.auth_fail_msg), Toast.LENGTH_LONG).show();
@@ -112,7 +101,7 @@ public class LoginActivity extends AppCompatActivity {
 
     private boolean isPasswordValid(String password) {
         //TODO: Replace this with your own logic
-        return password.length() > 4;
+        return password.length() > 5;
     }
 
     public void redirectToSignUpPage(View v) {

@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools">
-
     <RelativeLayout
         android:id="@+id/activity_main"
         android:layout_width="match_parent"
@@ -27,7 +26,6 @@
                 android:text=" Activity of Employer"
                 android:textColor="#FFEB3B"
                 android:textColorLink="#FFEB3B" />
-
             <Button
                 android:id="@+id/secondActivityButton"
                 android:layout_width="match_parent"
@@ -36,7 +34,6 @@
                 android:text="Activity of Employee "
                 android:textColor="#FFEB3B" />
         </LinearLayout>
-
         <TextView
             android:id="@+id/textView"
             android:layout_width="231dp"

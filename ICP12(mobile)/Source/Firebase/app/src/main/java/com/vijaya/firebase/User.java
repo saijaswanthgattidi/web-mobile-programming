@@ -6,7 +6,6 @@ public class User {
         // DataSnapshot.getValue(User.class)
         public User() {
         }
-
         public User(String name, String phone) {
             this.name = name;
             this.phone = phone;

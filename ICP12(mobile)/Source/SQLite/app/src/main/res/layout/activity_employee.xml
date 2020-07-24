@@ -100,7 +100,7 @@
                 android:layout_below="@id/employerTextView" />
 
             <Button
-                android:id="@+id/saveButton"
+                android:id="@+id/save"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/employerSpinner"
@@ -110,7 +110,7 @@
                 android:text="@string/save" />
 
             <Button
-                android:id="@+id/updateButton"
+                android:id="@+id/update"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/employerSpinner"
@@ -122,7 +122,7 @@
                 android:text="@string/update" />
 
             <Button
-                android:id="@+id/deleteButton"
+                android:id="@+id/delete"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/employerSpinner"
@@ -134,7 +134,7 @@
                 android:text="@string/delete" />
 
             <Button
-                android:id="@+id/searchButton"
+                android:id="@+id/search"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_below="@id/employerSpinner"
