@@ -150,7 +150,6 @@ public class EmployerActivity extends AppCompatActivity {
             date = calendar.getTimeInMillis();
         } catch (Exception e) {
         }
-
         SQLiteDatabase database = new SampleDBSQLiteHelper(this).getReadableDatabase();
 
         String[] projection = {
