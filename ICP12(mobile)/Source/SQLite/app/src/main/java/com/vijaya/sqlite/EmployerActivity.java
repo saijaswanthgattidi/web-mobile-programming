@@ -1,5 +1,4 @@
 package com.vijaya.sqlite;
-
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
@@ -12,7 +11,6 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
-
 import com.vijaya.sqlite.databinding.ActivityEmployerBinding;
 
 import java.text.SimpleDateFormat;
@@ -32,27 +30,27 @@ public class EmployerActivity extends AppCompatActivity {
 
         binding.recycleView.setLayoutManager(new LinearLayoutManager(this));
 
-        binding.saveButton.setOnClickListener(new View.OnClickListener() {
+        binding.save.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 saveToDB();
             }
         });
-        binding.updateButton.setOnClickListener(new View.OnClickListener() {
+        binding.update.setOnClickListener(new View.OnClickListener() {
 
             @Override
             public void onClick(View v) {
                 updateDB();
             }
         });
-        binding.deleteButton.setOnClickListener(new View.OnClickListener() {
+        binding.delete.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 deleteFromDB();
             }
         });
 
-        binding.searchButton.setOnClickListener(new View.OnClickListener() {
+        binding.search.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 readFromDB();
@@ -114,8 +112,6 @@ public class EmployerActivity extends AppCompatActivity {
             }
         };
         handler.postDelayed(r, 2000);*/
-
-
     }
 
     private void saveToDB() {
